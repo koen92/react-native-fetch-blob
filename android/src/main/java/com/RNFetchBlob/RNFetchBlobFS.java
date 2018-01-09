@@ -914,8 +914,10 @@ public class RNFetchBlobFS {
         if(path.startsWith(RNFetchBlobConst.FILE_PREFIX_BUNDLE_ASSET)) {
             return path;
         }
-        else
-            return PathResolver.getRealPathFromURI(RNFetchBlob.RCTContext, uri);
+        else {
+            // return PathResolver.getRealPathFromURI(RNFetchBlob.RCTContext, uri);
+            return null;
+        }
     }
 
 }
